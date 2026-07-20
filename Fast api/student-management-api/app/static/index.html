@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <!-- Load our CSS file -->
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Load an external font (Inter) from Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Student Management</h1>
+            <p>Portal for managing students</p>
+        </header>
+
+        <!-- Form to Add a New Student -->
+        <section class="add-student-section">
+            <h2>Add New Student</h2>
+            <form id="addStudentForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required placeholder="e.g. John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" required min="1" placeholder="e.g. 20">
+                </div>
+                <div class="form-group">
+                    <label for="course">Course</label>
+                    <input type="text" id="course" required placeholder="e.g. Computer Science">
+                </div>
+                <button type="submit">Add Student</button>
+            </form>
+        </section>
+
+        <!-- Table Displaying the Students -->
+        <section class="student-list-section">
+            <h2>Student List</h2>
+            <div class="table-container">
+                <table id="studentsTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Course</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <!-- The table body is left empty. Javascript will fill this in! -->
+                    <tbody id="studentTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Load our Javascript file at the very end so it runs after the HTML loads -->
+    <script src="/static/script.js"></script>
+</body>
+</html>
